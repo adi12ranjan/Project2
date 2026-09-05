@@ -1,0 +1,33 @@
+Delivered-To: priya.nair@brightwave-tech.com
+Received: from mx1.brightwave-tech.com (mx1.brightwave-tech.com [104.16.20.88])
+        by mailstore.brightwave-tech.com with ESMTPS id uvw987
+        for <priya.nair@brightwave-tech.com>; Thu, 04 Sep 2026 10:02:15 -0700 (PDT)
+Received: from smtp.brightwave-tech.com (smtp.brightwave-tech.com [104.16.20.91])
+        by mx1.brightwave-tech.com with ESMTPS id xyz111; Thu, 04 Sep 2026 17:02:09 +0000
+Authentication-Results: mx1.brightwave-tech.com;
+       spf=pass (domain of daniel.ortiz@brightwave-tech.com designates 104.16.20.91 as permitted sender) smtp.mailfrom=daniel.ortiz@brightwave-tech.com;
+       dkim=pass header.i=@brightwave-tech.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=brightwave-tech.com
+Return-Path: <daniel.ortiz@brightwave-tech.com>
+From: "Daniel Ortiz" <daniel.ortiz@brightwave-tech.com>
+To: priya.nair@brightwave-tech.com
+Subject: Notes from today's design review
+Date: Thu, 04 Sep 2026 17:02:05 +0000
+Message-ID: <n4o5t6e7s8@smtp.brightwave-tech.com>
+Content-Type: text/plain; charset="UTF-8"
+
+Hi Priya,
+
+Thanks for walking through the onboarding flow mockups today — I think the
+simplified 3-step version is the right call. A few notes from the review:
+
+1. Let's move the progress indicator to the top of the card, not the bottom.
+2. Can we get a version with the dark theme applied before Friday's sync?
+3. I'll follow up with the copy team about the empty-state text.
+
+No rush on any of this, just wanted to get it written down while it's fresh.
+Let me know if you want to grab 15 minutes tomorrow to go over the dark theme
+version together.
+
+Thanks,
+Daniel

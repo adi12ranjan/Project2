@@ -1,0 +1,40 @@
+Delivered-To: sarah.finance@acmecorp.com
+Received: from mail-relay-03.acmecorp.com (mail-relay-03.acmecorp.com [104.18.32.77])
+        by mx.google.com with ESMTPS id abc123
+        for <sarah.finance@acmecorp.com>; Tue, 02 Sep 2026 08:14:01 -0700 (PDT)
+Received: from smtp-out.hostingservice-cheap.ru (smtp-out.hostingservice-cheap.ru [185.220.101.47])
+        by mail-relay-03.acmecorp.com with SMTP id def456; Tue, 02 Sep 2026 15:13:55 +0000
+Received: from client-140.dynamic-pool.net (unknown [45.153.160.140])
+        by smtp-out.hostingservice-cheap.ru with ESMTP id ghi789; Tue, 02 Sep 2026 15:13:40 +0000
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of j.smith@acme-corp-finance.com does not designate 45.153.160.140 as permitted sender) smtp.mailfrom=j.smith@acme-corp-finance.com;
+       dkim=none (no signature found);
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=acme-corp-finance.com
+Return-Path: <j.smith@acme-corp-finance.com>
+Reply-To: John Smith <johnsmith.ceo1972@protonmail-secure.com>
+From: "John Smith - CEO" <j.smith@acme-corp-finance.com>
+To: sarah.finance@acmecorp.com
+Subject: URGENT - Confidential Wire Transfer Needed Today
+Date: Tue, 02 Sep 2026 15:13:38 +0000
+Message-ID: <a1b2c3d4e5f6@smtp-out.hostingservice-cheap.ru>
+Content-Type: text/plain; charset="UTF-8"
+
+Sarah,
+
+I need you to process an urgent wire transfer before end of day. This is highly
+confidential and time-sensitive, so please do not discuss it with anyone else
+on the team right now — I'm in back-to-back board meetings and can't take calls.
+
+Please wire $48,750 to the following account immediately:
+
+Beneficiary: Global Trade Consulting LLC
+Account: 8827491053
+Routing: 071000013
+
+Reply to this email once it's done. This needs to be completed within the hour,
+otherwise we risk losing the vendor contract. Verify nothing with the bank, just
+process it directly — I'll explain everything when I'm free.
+
+Thanks,
+John Smith
+Chief Executive Officer

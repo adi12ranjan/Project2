@@ -1,0 +1,29 @@
+Delivered-To: hr@brightwave-tech.com
+Received: from mx1.brightwave-tech.com (mx1.brightwave-tech.com [104.16.20.88])
+        by mailstore.brightwave-tech.com with ESMTPS id ghp223
+        for <hr@brightwave-tech.com>; Fri, 05 Sep 2026 06:20:44 -0700 (PDT)
+Received: from smtp.brightwave-tec.com (smtp.brightwave-tec.com [178.128.44.19])
+        by mx1.brightwave-tech.com with ESMTP id qrs556; Fri, 05 Sep 2026 13:20:39 +0000
+Authentication-Results: mx1.brightwave-tech.com;
+       spf=fail (domain of ceo@brightwave-tec.com does not designate 178.128.44.19 as permitted sender) smtp.mailfrom=ceo@brightwave-tec.com;
+       dkim=none (no signature found);
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=brightwave-tec.com
+Return-Path: <ceo@brightwave-tec.com>
+From: "Amanda Kruger" <ceo@brightwave-tec.com>
+To: hr@brightwave-tech.com
+Subject: Quick favor before the board call
+Date: Fri, 05 Sep 2026 13:20:35 +0000
+Message-ID: <lk9m8n7@smtp.brightwave-tec.com>
+Content-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+I'm heading into the board call in a few minutes and need one quick thing
+sorted before it starts. Can you send me the list of employee names, emails
+and dates of birth for the year-end HR audit? I need it in the next 20
+minutes so I can hand it to the auditor before we go live.
+
+I know it's short notice, appreciate you moving fast on this one.
+
+Amanda
+CEO, Brightwave Technologies
