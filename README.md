@@ -27,7 +27,7 @@ listed reason, nothing is a fabricated ML accuracy percentage.
   components/              Shell, ThreatGauge, Badge, ForensicGraph,
                              InvestigationResult, ReportModal
   lib/api.js                fetch helpers
-  next.config.js            proxies /api/* to BACKEND_URL (defaults to
+  next.config.mjs            proxies /api/* to BACKEND_URL (defaults to
                              localhost:8000 for local dev)
   package.json
 
@@ -85,7 +85,7 @@ Confirm it's up: `http://localhost:8000/api/health`
 npm install
 npm run dev
 ```
-Open `http://localhost:3000`. `next.config.js` proxies `/api/*` requests to
+Open `http://localhost:3000`. `next.config.mjs` proxies `/api/*` requests to
 the backend on port 8000 by default, so no environment variables are needed
 for local development.
 
