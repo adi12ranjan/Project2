@@ -13,7 +13,25 @@ listed reason, nothing is a fabricated ML accuracy percentage.
 ## Project structure
 
 ```
-backend/
+/                     Next.js frontend lives at repo root (Vercel expects
+                      package.json here for zero-config detection — no
+                      Root Directory setting needed)
+  app/
+    layout.jsx            root layout (wraps pages with the sidebar Shell)
+    page.jsx               Dashboard
+    investigation/page.jsx  Email Investigation (main demo page)
+    intelligence/page.jsx    Threat Intelligence
+    iocs/page.jsx            IOC Explorer
+    reports/page.jsx         Reports
+    globals.css              TraceMail AI dark SOC design system
+  components/              Shell, ThreatGauge, Badge, ForensicGraph,
+                             InvestigationResult, ReportModal
+  lib/api.js                fetch helpers
+  next.config.js            proxies /api/* to BACKEND_URL (defaults to
+                             localhost:8000 for local dev)
+  package.json
+
+backend/                 FastAPI app — separate service, not deployed by Vercel
   app/
     main.py             FastAPI app + routes
     parser.py            .eml -> structured fields
@@ -30,21 +48,25 @@ backend/
     demo_data/             4 real, hand-built demo .eml files
   requirements.txt
 
-frontend/
-  app/
-    layout.jsx            root layout (wraps pages with the sidebar Shell)
-    page.jsx               Dashboard
-    investigation/page.jsx  Email Investigation (main demo page)
-    intelligence/page.jsx    Threat Intelligence
-    iocs/page.jsx            IOC Explorer
-    reports/page.jsx         Reports
-    globals.css              TraceMail AI dark SOC design system
-  components/              Shell, ThreatGauge, Badge, ForensicGraph,
-                             InvestigationResult, ReportModal
-  lib/api.js                fetch helpers
-  next.config.js            proxies /api/* to the FastAPI backend on :8000
-  package.json
+render.yaml             one-click Render blueprint for the backend
 ```
+
+## Deploying
+
+**Frontend (Vercel):** push this repo to GitHub, import it into Vercel. Since
+`package.json` sits at the repo root, Vercel auto-detects Next.js with zero
+configuration — no Root Directory setting to remember or forget.
+
+**Backend (Render):** New → Blueprint → point at the same repo → it reads
+`render.yaml` automatically (it sets its own root directory to `backend/`
+internally, so this works from the same repo without conflicting with the
+frontend). Copy the resulting URL.
+
+**Connect them:** in Vercel → Settings → Environment Variables, add
+`BACKEND_URL` = your Render URL (e.g. `https://tracemail-ai-backend.onrender.com`,
+no trailing slash). Redeploy the frontend once so it picks up the variable.
+
+
 
 ## Running it locally
 
@@ -58,15 +80,14 @@ uvicorn app.main:app --reload --port 8000
 ```
 Confirm it's up: `http://localhost:8000/api/health`
 
-**Terminal 2 — frontend:**
+**Terminal 2 — frontend (run from the repo root, not a subfolder):**
 ```bash
-cd frontend
 npm install
 npm run dev
 ```
 Open `http://localhost:3000`. `next.config.js` proxies `/api/*` requests to
-the backend on port 8000, so no CORS setup or environment variables are
-needed for local development.
+the backend on port 8000 by default, so no environment variables are needed
+for local development.
 
 ## Demo flow
 
